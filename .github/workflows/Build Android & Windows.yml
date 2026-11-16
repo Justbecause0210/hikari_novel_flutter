@@ -43,13 +43,13 @@ jobs:
           mv build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk build/app/outputs/flutter-apk/HikariNovel-${{ steps.version.outputs.app_version }}-Android-armeabi-v7a.apk
 
       - name: Upload Android arm64-v8a (64位)
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: HikariNovel-${{ steps.version.outputs.app_version }}-Android-arm64-v8a
           path: build/app/outputs/flutter-apk/HikariNovel-${{ steps.version.outputs.app_version }}-Android-arm64-v8a.apk
 
       - name: Upload Android armeabi-v7a (32位)
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: HikariNovel-${{ steps.version.outputs.app_version }}-Android-armeabi-v7a
           path: build/app/outputs/flutter-apk/HikariNovel-${{ steps.version.outputs.app_version }}-Android-armeabi-v7a.apk
@@ -83,7 +83,7 @@ jobs:
         run: flutter build windows --release
 
       - name: Upload Windows Portable
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: HikariNovel-${{ steps.version.outputs.app_version }}-Windows-x64
           path: build/windows/x64/runner/Release/
